@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Alura Typer</title>
+	<link rel="stylesheet" type="text/css" href="css/libs/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/libs/google-fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/libs/selectize.default.css">
+	<link rel="stylesheet" type="text/css" href="css/libs/tooltipster.bundle.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="center">Alura Typer</h1>
+		<p class="frase">Sandra is brother Mike is her manager. He says, Sandra is only 18. She enjoys acting and entertaining people. But she is not happy.</p>
+
+		<div class="center">
+			<img src="img/spinner.gif" id="progresso">
+			<p id="error" ><strong>Ocorreu um erro, por favor tente novamente.</strong></p>
+		</div>
+
+		<ul class="informacoes center">
+			<li>
+				<i class="small material-icons icones">description</i>
+				<span id="qtd-palavras" ></span> Palavras
+			</li>
+			<li>
+				<i class="small material-icons icones">query_builder</i>
+				<span id="contagem-tempo" ></span> segundos
+			</li>
+		</ul>
+		<textarea class="areaTexto" rows="20" cols="50"></textarea>
+		<div class="botoes">
+			<a id="reiniciar-jogo" class="btn-floating btn-large waves-effect waves-light red">
+				<i class="material-icons">restore</i>
+			</a>
+			<a id="lista-placar" class="btn-floating btn-large waves-effect waves-light green">
+				<i class="material-icons">format_list_bulleted</i>
+			</a>
+			<a id="altera-frase" class="btn-floating btn-large waves-effect waves-light blue">
+				<i class="material-icons">shuffle</i>
+			</a>
+			<a id="pesquisa-frase" class="btn-floating btn-large waves-effect waves-light gray">
+				<i class="material-icons">search</i>
+			</a>
+			<input id="numero-frase" type="number" min="0" max="9">
+
+			<div class="select-usuario">
+			<select id="usuario">
+				<option value="Maria">Maria</option>
+				<option value="Joao">Joao</option>
+			</select>
+			</div>
+			<a id="sincroniza-placar" class="btn-floating btn-large waves-effect waves-light brown">
+				<i class="material-icons tooltip" title="Placar sincronizado com sucesso.">swap_vert</i>
+			</a>
+		</div>
+		<ul class="center">
+			<li><span id="qtd-caractere">0</span> Caracteres</li>
+			<li><span id="qtd-palavras-textarea">0</span> Palavras</li>
+		</ul>
+		<section class="table">
+			<h4 class="center">Placar</h4>
+			<table class="centered placar">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Pontuação</th>
+						<th>Ação</th>
+					</tr>
+				</thead>
+				<tbody>					
+				</tbody>
+			</table>			
+		</section>
+	</div>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+	<script src="js/placar.js" type="text/javascript"></script>
+	<script src="js/selectize.js" type="text/javascript"></script>
+	<script src="js/tooltipster.bundle.min.js" type="text/javascript"></script>
+</body>
+</html>
